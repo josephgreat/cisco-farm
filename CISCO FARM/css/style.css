@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.flex{
+    display: flex;
+}
+.justify-btw{
+    justify-content: space-between;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.flex_col{
+    flex-direction: column;
+}
+body {
+    height: 100vh;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#bg_img{
+    position: absolute;
+    width: 100%;
+    vertical-align: middle;
+    z-index: -1;
+    top: -200px;
+    filter: brightness(.5);
+}
+@media (min-width: 768px) {
+    #bg_img{
+        aspect-ratio: 3992/2992;
+    }
+}
+header {
+     background-color: rgb(14, 28, 14);
+     color: #fff;
+     padding: .5em 1.5em;
+}
+
+
+#navbar_links{
+    min-width: 65%;
+    text-transform: capitalize;
+
+}
+main{
+    height: calc(100vh - 100px);
+}
+.title{
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 1px 1px 5px #000;
+}
+.user_btns{
+    margin-top: 5em;
+
+}
+
+.user_btns > button{
+    border: 1px solid green;
+    border-radius: 2em;
+    margin: 0 1em;
+    color: white;
+    background: transparent;
+    transition: all 300ms ease;
+}
+
+.user_btns > button {
+    background: transparent;
+    color: white;
+    font-size: 1.5em;
+    padding: .5em 1em;
+    display: inline-block;
+}
+.user_btns #login{
+    background: rgb(0, 128, 0);
+}
+.user_btns #login:hover{
+    background: transparent;
+}
+.user_btns #sign_up:hover{
+    background: rgb(0, 128, 0);
+}
+
+/* modal */
+.user_modal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.overlay{
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+}
+.user_modal .container{
+    background-color: #fff;
+    padding: 2em 3em;
+    border-radius: 1.5em;
+    min-width: min(30rem, 50vw);
+    max-width: min(40rem, 75vw);
+    max-height: 65vh;
+    overflow: scroll;
+    z-index: 2;
+}
+.user_modal .container .modal_title{
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.user_modal .container legend label{
+    display: block;
+    margin-bottom: .5em;
+}
+.user_modal .container legend input{
+    margin-bottom: 1em;
+    width: 100%;
+    border: none;
+    background: rgba(0, 128,0,.3);
+    border-radius: 2em;
+    padding: .5em 1em;
+    display: block;
+    font-size: 1.1em;
+}
+.hidden{
+    visibility: hidden;
+}
+.user_modal .container legend .submit_btn{
+    width: auto;
+    margin: 0 auto 1em;
+    padding: .7em 1em;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: all .3s ease;
+    cursor: pointer;
+
+}
+.user_modal .container legend .submit_btn:hover{
+    background: rgba(0, 128,0,1);
+    color: #fff;
+}
+.user_modal .container form p{
+    text-align: center;
+    margin: .5em 0;
+}
+.user_modal .container form p a{
+    color: rgb(0, 130, 232);
+}
+.user_modal .container form p a:hover{
+    text-decoration: underline;
+}
+#sign_up_modal form{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#sign_up_modal legend{
+    display: block;
+    width: 45%;
+}
+#sign_up_modal #category span:first-child{
+    display: block;
+    margin-bottom: .5em;
+}
+#sign_up_modal #category > span:not(span:first-child){
+    margin-right: 1em;
+}
+#sign_up_modal #category label,  #sign_up_modal #category input{
+    display: inline-block;
+    width: auto;
+} 
