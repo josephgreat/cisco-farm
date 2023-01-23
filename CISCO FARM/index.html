@@ -1,115 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>CISCO FARM</title>
-</head>
-<div class="bg-container">
-    <img src="/img/farm1.jpg" id="bg_img" alt="background image">
-</div>
-<header>
-    <nav class="flex align-center justify-btw">
-        <h1 id="logo">CISCO FARM</h1>
+  </head>
+  <body>
+    <div class="bg-container">
+      <img src="./img/farm1.jpg" id="bg_img" alt="background image" />
+    </div>
+    <header>
+      <nav class="flex align-center justify-btw">
+        <h1 id="logo"><a href="#">CISCO FARM</a></h1>
         <ul id="navbar_links" class="flex align-center justify-around">
-            <li class="navbar_link">Farmers</li>
-            <li class="navbar_link">Products</li>
-            <li class="navbar_link">Help</li>
-            <li class="navbar_link">cart</li>
-
+          <li class="navbar_link">
+            <a href="./pages/farmers.html">Farmers</a>
+          </li>
+          <li class="navbar_link">
+            <a href="./pages/products.html">Products</a>
+          </li>
+          <li class="navbar_link"><a href="#help">Help</a></li>
+          <li class="navbar_link"><a href="./pages/cart.html">cart</a></li>
         </ul>
-    </nav>
-</header>
-<main class="flex align-center justify-center flex_col">
-    <h2 class="title">Taking agriculture to another level with CISCO FARM</h2>
-    <div class="user_btns">
+        <!-- <button class="nav_toogle_btn flex flex_col">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button> -->
+      </nav>
+    </header>
+    <main class="flex align-center justify-center flex_col">
+      <h2 class="title">Taking agriculture to another level with CISCO FARM</h2>
+      <div class="user_btns">
         <button id="login">Log in</button>
         <button id="sign_up">Sign up</button>
-    </div>
-    <section class="user_modal flex justify-center align-center hidden" data-target="#login">
-        <div class="overlay"></div>    
-        <div class="container">
-                <h3 class="modal_title">Log in</h3>
-                <form>
-                    <legend class="flex flex_col">
-                        <label for="user_name">Username</label>
-                        <input type="text" name="user_name" id="user_name">
-                    </legend>
-                    <legend class="flex flex_col">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password">
-                    </legend>
-                    
-                    <legend class="flex flex_col">
-                        <input type="submit" id="submit_login" value="Submit">
-                    </legend>
-                    <p><a href="#">Forgot Password?</a></p>
-                    <p><a href="#" id="signup_link">Don't have an account? Create One</a></p>
-                </form>                
-            </div>
-        </section>
-    <section class="user_modal flex justify-center align-center hidden" data-target="#sign_up" id="sign_up_modal">
+      </div>
+      <section
+        class="user_modal flex justify-center align-center hidden"
+        data-target="#login"
+      >
         <div class="overlay"></div>
         <div class="container">
-            <h4 class="modal_title"> Sign up</h4>
-            <form class="flex align-center">
-                <legend class="flex flex_col">
-                    <label for="name">First Name</label>
-                    <input type="text" name="name" id="name">
-                </legend>
-                <legend class="flex flex_col">
-                    <label for="name">Last Name</label>
-                    <input type="text" name="name" id="name">
-                </legend>
-                <legend class="flex flex_col">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username">
-                </legend>
-                <legend class="flex flex_col">
-                    <label for="number">Mobile Number</label>
-                    <input type="number" name="number" id="number">
-                </legend>
-               
-                <legend class="flex flex_col">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
-                </legend>
-                <legend class="flex flex_col">
-                    <label for="pass_word">Password</label>
-                    <input type="password" name="pass_word" id="pass_word">
-                </legend>
-                <legend class="flex flex_col">
-                    <label for="c_p">Confirm Passord</label>
-                    <input type="password" name="c_p" id="c_p">
-                </legend>
-                <legend class="flex flex_col">
-                    <label for="add">Address</label>
-                    <input type="text" name="add" id="add">
-                </legend>
-                <legend class="flex flex_col">
-                    <label for="p_p">Profile Picture</label>
-                    <input type="file" name="p_p" id="p_p">
-                </legend>
-            
-                <legend class="flex flex_col" id="category">
-                    <span>Category</span>
-                    <span><input type="radio" name="category" id="farmer">
-                        <label for="farmer">Farmer</label></span>
-                    <span><input type="radio" name="category" id="buyer">
-                        <label for="buyer">Buyer</label></span>
-                </legend>
-                <legend style="width: 100%;">
-                    <input type="submit" class="submit_btn" id="submit_sign_up" value="Submit">
-                </legend>
-                <p style="width: 100%;"><a href="#" id="login_link">Already have an account? Log in</a></p>
-                
-            </form>
-        </div>
-    </section>
-</main>
-<script src="/js/app.js"></script>
-</body>
+          <h3 class="modal_title">Log in</h3>
+          <form>
+            <legend class="flex flex_col">
+              <label for="user_name">Username</label>
+              <input required type="text" name="user_name" id="user_name" />
+            </legend>
+            <legend class="flex flex_col">
+              <label for="password">Password</label>
+              <input required type="password" name="password" id="password" />
+            </legend>
 
+            <legend class="flex flex_col">
+              <input
+                type="submit"
+                class="submit_btn"
+                id="submit_login"
+                value="Submit"
+              />
+            </legend>
+            <p><a href="#">Forgot Password?</a></p>
+            <p>
+              <a href="#" id="signup_link">Don't have an account? Create One</a>
+            </p>
+          </form>
+        </div>
+      </section>
+      <section
+        class="user_modal flex justify-center align-center hidden"
+        data-target="#sign_up"
+        id="sign_up_modal"
+      >
+        <div class="overlay"></div>
+        <div class="container">
+          <h4 class="modal_title">Sign up</h4>
+          <form class="flex align-center">
+            <legend class="flex flex_col">
+              <label for="name">First Name</label>
+              <input required type="text" name="name" id="name" />
+            </legend>
+            <legend class="flex flex_col">
+              <label for="name">Last Name</label>
+              <input required type="text" name="name" id="name" />
+            </legend>
+            <legend class="flex flex_col">
+              <label for="username">Username</label>
+              <input required type="text" name="username" id="username" />
+            </legend>
+            <legend class="flex flex_col">
+              <label for="number">Mobile Number</label>
+              <input required type="number" name="number" id="number" />
+            </legend>
+
+            <legend class="flex flex_col">
+              <label for="email">Email</label>
+              <input required type="email" name="email" id="email" />
+            </legend>
+            <legend class="flex flex_col">
+              <label for="pass_word">Password</label>
+              <input required type="password" name="pass_word" id="pass_word" />
+            </legend>
+            <legend class="flex flex_col">
+              <label for="c_p">Confirm Passord</label>
+              <input required type="password" name="c_p" id="c_p" />
+            </legend>
+            <legend class="flex flex_col">
+              <label for="add">Address</label>
+              <input type="text" name="add" id="add" />
+            </legend>
+            <legend class="flex flex_col">
+              <label for="p_p">Profile Picture</label>
+              <input type="file" name="p_p" id="p_p" />
+            </legend>
+
+            <legend class="flex flex_col" id="category">
+              <span>Category</span>
+              <span
+                ><input required type="radio" name="category" id="farmer" />
+                <label for="farmer">Farmer</label></span
+              >
+              <span
+                ><input required type="radio" name="category" id="buyer" />
+                <label for="buyer">Buyer</label></span
+              >
+            </legend>
+            <legend style="width: 100%">
+              <input
+                type="submit"
+                class="submit_btn"
+                id="submit_sign_up"
+                value="Submit"
+              />
+            </legend>
+            <p style="width: 100%">
+              <a href="#" id="login_link">Already have an account? Log in</a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="./js/app.js"></script>
+  </body>
 </html>
